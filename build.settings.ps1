@@ -5,7 +5,7 @@ $outDir         = [IO.Path]::Combine($projectRoot, 'Output')
 $moduleOutDir   = "$outDir/$moduleName/$moduleVersion"
 @{
     ProjectRoot     = $projectRoot
-    ProjectName     = $env:BHProjectName
+    ProjectName     = "$env:BHProjectName"
     SUT             = $env:BHModulePath
     Tests           = Get-ChildItem -Path ([IO.Path]::Combine($projectRoot, 'tests')) -Filter '*.tests.ps1'
     OutputDir       = $outDir
